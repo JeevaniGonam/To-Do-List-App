@@ -1,13 +1,136 @@
-body {
+/* src/App.css */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fecfef, #feada6, #f6d365);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.App {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  color: #3c3b6e;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 65%;
+  padding: 12px;
+  border: 2px solid #ff9a9e;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #fecfef;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  background-color: #f6d365;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #feada6;
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fef3bd;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #8b8680;
+  background-color: #e0e0e0;
+}
+
+li button {
+  padding: 7px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+li button:nth-child(2) {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+li button:nth-child(2):hover {
+  background-color: #f87060;
+}
+
+li button:nth-child(1) {
+  background-color: #6a82fb;
+  color: white;
+}
+
+li button:nth-child(1):hover {
+  background-color: #6baf92;
 }
